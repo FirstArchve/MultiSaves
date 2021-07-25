@@ -7,13 +7,14 @@
 #include <QDirIterator>
 #include <QSettings>
 #include "setting.h"
+#include <QCoreApplication>
 
 //窗体初始化函数
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     //读取配置文件
-    QSettings *configIniWrite = new QSettings("./cfg.ini", QSettings::IniFormat);
+    QSettings *configIniWrite = new QSettings(QCoreApplication::applicationDirPath() + "/cfg.ini", QSettings::IniFormat);
     if(configIniWrite->value("/Setting/DefaultDir").toString() == "1")
     {
     }else{
@@ -152,7 +153,7 @@ void MainWindow::on_start_clicked()
     }
 
     //将路径写入配置文件做下一次默认路径
-    QSettings *configIniWrite = new QSettings("./cfg.ini", QSettings::IniFormat);
+    QSettings *configIniWrite = new QSettings(QCoreApplication::applicationDirPath() + "/cfg.ini", QSettings::IniFormat);
     if(configIniWrite->value("/Setting/DefaultDir").toString() == "2")
     {
     }else{
@@ -174,6 +175,6 @@ void MainWindow::on_action_triggered()
 //菜单-帮助-关于MultiSaves 的单击事件
 void MainWindow::on_action_MultiSaves_triggered()
 {
-    QMessageBox::about(this, "关于MultiSaves", "版本：1.0 \n 作者：FirstArchve (Misaka11025)\n 编译日期:2021.7.23\n 作者网站：https://space.bilibili.com/520551427\n 协议：MIT ");
+    QMessageBox::about(this, "关于MultiSaves", "版本：v0.1.1-alpha \n 作者：FirstArchve (Misaka11025)\n 编译日期:2021.7.24\n 作者网站：https://space.bilibili.com/520551427\n 协议：MIT ");
 }
 

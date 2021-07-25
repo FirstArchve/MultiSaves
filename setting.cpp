@@ -12,7 +12,7 @@ setting::setting(QWidget *parent) : QDialog(parent),ui(new Ui::setting)
 {
     ui->setupUi(this);
     //读取配置文件
-    QSettings *configIniWrite = new QSettings("./cfg.ini", QSettings::IniFormat);
+    QSettings *configIniWrite = new QSettings(QCoreApplication::applicationDirPath() + "/cfg.ini", QSettings::IniFormat);
     if(configIniWrite->value("/Setting/DefaultDir").toString() == "0")
     {
         ui->DirRB1->setChecked(true);
@@ -75,7 +75,7 @@ void setting::on_OpenOrderDir_clicked()
 void setting::on_apply_clicked()
 {
     //将设置保存至配置文件中
-    QSettings *configIniWrite = new QSettings("./cfg.ini", QSettings::IniFormat);
+    QSettings *configIniWrite = new QSettings(QCoreApplication::applicationDirPath() + "/cfg.ini", QSettings::IniFormat);
     if(ui->DirRB1->isChecked())
     {
         configIniWrite->setValue("/Setting/DefaultDir","0");
