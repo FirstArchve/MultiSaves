@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>458</width>
+    <width>581</width>
     <height>258</height>
    </rect>
   </property>
@@ -20,7 +20,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>游戏核心文件夹：</string>
+         <string>Game core folder:</string>
         </property>
        </widget>
       </item>
@@ -45,7 +45,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>备份存放文件夹：</string>
+         <string>Backup storage folder:</string>
         </property>
        </widget>
       </item>
@@ -70,7 +70,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>需备份的世界</string>
+         <string>The world to be backed up</string>
         </property>
        </widget>
       </item>
@@ -104,7 +104,7 @@
          <bool>true</bool>
         </property>
         <property name="text">
-         <string>Xaero‘s map 数据</string>
+         <string>Xaero‘s map Data</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -117,21 +117,21 @@
       <item>
        <widget class="QCheckBox" name="ModsCheck">
         <property name="text">
-         <string>备份mods</string>
+         <string>Backup mods</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QCheckBox" name="OptionsCheck">
         <property name="text">
-         <string>备份options.txt</string>
+         <string>Backup options.txt</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QCheckBox" name="ConfigCheck">
         <property name="text">
-         <string>备份config</string>
+         <string>Backup config</string>
         </property>
        </widget>
       </item>
@@ -151,19 +151,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>458</width>
+     <width>581</width>
      <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>文件</string>
+     <string>File</string>
     </property>
     <addaction name="action"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>帮助</string>
+     <string>Help</string>
     </property>
     <addaction name="action_MultiSaves"/>
    </widget>
@@ -173,12 +173,12 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action">
    <property name="text">
-    <string>偏好设置</string>
+    <string>Preferences</string>
    </property>
   </action>
   <action name="action_MultiSaves">
    <property name="text">
-    <string>关于MultiSaves</string>
+    <string>About</string>
    </property>
   </action>
  </widget>

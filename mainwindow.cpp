@@ -36,7 +36,7 @@ void MainWindow::on_Open_GamePath_clicked()
     QDir Dir = Path + "/saves";
     if(!Dir.exists())
     {
-        QMessageBox::critical(this, tr("错误"), tr("这不是一个正常的游戏核心文件夹!"));
+        QMessageBox::critical(this, tr("Mistake"), tr("This is not a normal game core folder!"));
         return ;
     }
     ui->GamePath->setText(Path);
@@ -67,7 +67,7 @@ void MainWindow::on_Open_GamePath_clicked()
 void MainWindow::on_Open_OrderPath_clicked()
 {
     //推出打开文件夹对话框并将文件夹路径显示在文本框中
-    ui->OrderPath->setText(QFileDialog::getExistingDirectory ( 0, "选择备份存放文件夹","",QFileDialog::ShowDirsOnly));
+    ui->OrderPath->setText(QFileDialog::getExistingDirectory ( 0, "Select the backup storage folder","",QFileDialog::ShowDirsOnly));
 }
 
 //Start! 按钮的单机事件
@@ -162,7 +162,7 @@ void MainWindow::on_start_clicked()
     }
 
     //弹出提示
-    QMessageBox::information(this, tr("提示"), tr("备份已完成！"),QMessageBox::Ok, QMessageBox::Ok);
+    QMessageBox::information(this, tr("hint"), tr("The backup is complete!"),QMessageBox::Ok, QMessageBox::Ok);
 }
 
 //菜单-文件-偏好设置 的单击事件
@@ -175,6 +175,6 @@ void MainWindow::on_action_triggered()
 //菜单-帮助-关于MultiSaves 的单击事件
 void MainWindow::on_action_MultiSaves_triggered()
 {
-    QMessageBox::about(this, "关于MultiSaves", "版本：v0.1.1-alpha \n 作者：FirstArchve (Misaka11025)\n 编译日期:2021.7.24\n 作者网站：https://space.bilibili.com/520551427\n 协议：MIT ");
+    QMessageBox::about(this, "About MultiSaves", "Version：v0.1.1-alpha \n Author：FirstArchve (Misaka11025)\n Compilation date:2021.7.24\n Website：https://space.bilibili.com/520551427\n LICENSE：MIT ");
 }
 

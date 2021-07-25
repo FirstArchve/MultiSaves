@@ -54,11 +54,11 @@ void setting::on_DirRB3_toggled(bool checked)
 void setting::on_OpenGameDir_clicked()
 {
     //推出文件夹打开对话框并检测文件夹是否合法
-    QString Path = QFileDialog::getExistingDirectory ( 0, "选择游戏核心文件夹","",QFileDialog::ShowDirsOnly);
+    QString Path = QFileDialog::getExistingDirectory ( 0, "Select the game core folder","",QFileDialog::ShowDirsOnly);
     QDir Dir = Path + "/saves";
     if(!Dir.exists())
     {
-        QMessageBox::critical(this, tr("错误"), tr("这不是一个正常的游戏核心文件夹!"));
+        QMessageBox::critical(this, tr("Mistake"), tr("This is not a normal game core folder!"));
         return ;
     }
     ui->GamePath->setText(Path);
@@ -68,7 +68,7 @@ void setting::on_OpenGameDir_clicked()
 void setting::on_OpenOrderDir_clicked()
 {
     //推出打开文件夹对话框并将文件夹路径显示在文本框中
-    ui->OrderPath->setText(QFileDialog::getExistingDirectory ( 0, "选择备份存放文件夹","",QFileDialog::ShowDirsOnly));
+    ui->OrderPath->setText(QFileDialog::getExistingDirectory ( 0, "Select the backup storage folder","",QFileDialog::ShowDirsOnly));
 }
 
 //Apply按钮的单击事件
@@ -91,12 +91,12 @@ void setting::on_apply_clicked()
         //判断路径是否合法
         if(!GameDir.exists())
         {
-            QMessageBox::critical(this, tr("错误"), tr("这不是一个正常的游戏核心文件夹!"));
+            QMessageBox::critical(this, tr("Mistake"), tr("This is not a normal game core folder!"));
             return ;
         }
         if(!OrderDir.exists())
         {
-            QMessageBox::critical(this, tr("错误"), tr("这不是一个合法的文件夹！"));
+            QMessageBox::critical(this, tr("Mistake"), tr("This is not a legal folder!"));
             return ;
         }
         configIniWrite->setValue("/Setting/DefaultDir","2");

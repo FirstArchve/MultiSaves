@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>498</width>
-    <height>225</height>
+    <width>500</width>
+    <height>228</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>关于默认的游戏核心文件夹及备份文件夹</string>
+      <string>About the default game core folder and backup folder</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
@@ -25,14 +25,14 @@
         <item>
          <widget class="QRadioButton" name="DirRB1">
           <property name="text">
-           <string>使用上一次的</string>
+           <string>Use last</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QRadioButton" name="DirRB2">
           <property name="text">
-           <string>不默认,每次重新指定</string>
+           <string>Not default, re-specify each time</string>
           </property>
          </widget>
         </item>
@@ -43,7 +43,7 @@
         <item>
          <widget class="QRadioButton" name="DirRB3">
           <property name="text">
-           <string>自定义</string>
+           <string>Customize</string>
           </property>
          </widget>
         </item>
@@ -54,7 +54,7 @@
             <item>
              <widget class="QLabel" name="label_2">
               <property name="text">
-               <string>游戏核心文件夹</string>
+               <string>Game core folder</string>
               </property>
              </widget>
             </item>
@@ -82,7 +82,7 @@
             <item>
              <widget class="QLabel" name="label">
               <property name="text">
-               <string>备份存放文件夹</string>
+               <string>Backup storage folder</string>
               </property>
              </widget>
             </item>
